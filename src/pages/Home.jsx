@@ -6,7 +6,7 @@ function Home() {
   return (
     <Container fluid className="p-0">
       <Image
-        src="/Images/vodnik_banner.jpg" // Placeholder only, will change later
+        src={import.meta.env.BASE_URL + "/Images/vodnik_banner.jpg"} // Placeholder only, will change later
         className="profile-banner"
         alt="Banner"
       />
@@ -39,7 +39,7 @@ function Home() {
             <a href="https://twitter.com/your_twitter" target="_blank" rel="noopener noreferrer">
               <div className="social-card twitter-card">
                 <div className="social-image">
-                  <Image src="/Images/vodnik_logo.jpg" alt="Twitter" />
+                  <Image src={import.meta.env.BASE_URL + "/Images/vodnik_logo.jpg"} alt="Twitter" />
                 </div>
                 <div className="social-content">
                   <h3>FOLLOW ME ON TWITTER</h3>
@@ -53,7 +53,7 @@ function Home() {
             <a href="https://ko-fi.com/your_kofi" target="_blank" rel="noopener noreferrer">
               <div className="social-card kofi-card">
                 <div className="social-image">
-                  <Image src="/Images/vodnik_kofi.jpg" alt="Ko-fi" />
+                  <Image src={import.meta.env.BASE_URL + "/Images/vodnik_kofi.jpg"} alt="Ko-fi" />
                 </div>
                 <div className="social-content">
                   <h3>SUPPORT ME THROUGH</h3>
@@ -67,7 +67,7 @@ function Home() {
             <a href="https://www.redbubble.com/people/19Vodnik/shop?asc=u&ref=account-nav-dropdown" target="_blank" rel="noopener noreferrer">
               <div className="social-card alt-card">
                 <div className="social-image">
-                  <Image src="/Images/redbubble_art.jpg" alt="Ko-fi" />
+                  <Image src={import.meta.env.BASE_URL + "/Images/redbubble_art.jpg"} alt="Ko-fi" />
                 </div>
                 <div className="social-content">
                   <h3>BUY STICKERS!</h3>
@@ -81,7 +81,7 @@ function Home() {
             <a href="https://x.com/vdnk_lab" target="_blank" rel="noopener noreferrer">
               <div className="social-card twitter-card">
                 <div className="social-image">
-                  <Image src="/Images/vodnik_alt.jpg" alt="Ko-fi" />
+                  <Image src={import.meta.env.BASE_URL + "/Images/vodnik_alt.jpg"} alt="Ko-fi" />
                 </div>
                 <div className="social-content">
                   <h3> For RKGK, studies, model kits, random BS + NSFW🔞</h3>

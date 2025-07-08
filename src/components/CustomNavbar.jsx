@@ -10,7 +10,7 @@ function CustomNavbar() {
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
           <Image
-            src="/Images/vodnik_logo.jpg"
+            src={import.meta.env.BASE_URL +"/Images/vodnik_logo.jpg"}
             width={100}
             height={100}
             roundedCircle
