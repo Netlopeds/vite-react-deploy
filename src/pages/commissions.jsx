@@ -4,7 +4,7 @@ import '../App.css';
 
 function Commissions() {
   return (
-    <Container fluid className="p-0">
+    <Container fluid className="p-0 commission-page">
       <div className="profile-section">
         <div className="commission-header">
           <h1 className="commission-title">COMMISSION</h1>
@@ -40,16 +40,61 @@ function Commissions() {
         </div>
 
         <div className="commission-item">
-          <Row className="align-items-center gy-3">
+          <Row className="align-items-end gy-3">
             <Col md={5}>
               <Image
                 src={import.meta.env.BASE_URL + '/Images/commission_example_lineart.jpg'}
+                fluid
+              />
+              <Image
+                src={import.meta.env.BASE_URL + '/Images/commission_example_lineart_painted.jpg'}
                 fluid
               />
             </Col>
             <Col md={7}>
               <p className="commission-details">
                 <span className="commission-price">50$</span> - SKETCH/LINEART ONLY
+              </p>
+              <p className="commission-details-3">
+                <span className="commission-price">75$</span> - LINEART COLORED 
+              </p>
+            </Col>
+          </Row>
+        </div>
+        <div className="commission-item">
+          <Row className="align-items-end gy-3">
+            <Col md={5}>
+              <Image
+                src={import.meta.env.BASE_URL + '/Images/commission_example_painted_render.jpg'}
+                fluid
+              />
+              <Image
+                src={import.meta.env.BASE_URL + '/Images/commission_example_painted_render_2.jpg'}
+                fluid
+              />
+            </Col>
+            <Col md={7}>
+              <p className="commission-details-4">
+                <span className="commission-price">200$</span> - PAINTED RENDER WITH BG (FULL ILLUSTRATION)
+              </p>
+            </Col>
+          </Row>
+        </div>
+        <div className="commission-item">
+          <Row className="align-items-end gy-3">
+            <Col md={5}>
+              <Image
+                src={import.meta.env.BASE_URL + '/Images/commission_example_charactersheet.jpg'}
+                fluid
+              />
+              <Image
+                src={import.meta.env.BASE_URL + '/Images/commission_example_charactersheet2.jpg'}
+                fluid
+              />
+            </Col>
+            <Col md={7}>
+              <p className="commission-details-2">
+                <span className="commission-price">200$</span> - CHARACTER SHEET
               </p>
             </Col>
           </Row>

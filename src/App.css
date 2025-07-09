@@ -459,6 +459,7 @@ body {
 
 .commission-item {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .commission-details {
@@ -466,9 +467,70 @@ body {
   font-weight: 500;
   color: #333;
   text-align: left;
+  padding-left: 20px;
+  position: relative;
+  bottom: 1000px;
+}
+
+.commission-details-4 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+  padding-left: 20px;
+  position: relative;
+  bottom: 700px;
+}
+
+.commission-details-2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+  padding-left: 20px;
+  position: relative;
+  bottom: 300px;
+}
+
+.commission-details-3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+  padding-left: 20px;
+  position: relative;
+  bottom: 400px;
 }
 
 .commission-price {
   color: #d9534f;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .commission-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .commission-header, .prices-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .commission-title, .prices-title {
+    font-size: 3rem;
+  }
+
+  .commission-details {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .commission-divider {
+    width: 100%;
+  }
 }
