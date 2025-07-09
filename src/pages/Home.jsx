@@ -50,7 +50,7 @@ function Home() {
           </div>
           
           <div className="social-item">
-            <a href="https://ko-fi.com/your_kofi" target="_blank" rel="noopener noreferrer">
+            <a href="https://ko-fi.com/19vodnik" target="_blank" rel="noopener noreferrer">
               <div className="social-card kofi-card">
                 <div className="social-image">
                   <Image src={import.meta.env.BASE_URL + "/Images/vodnik_kofi.jpg"} alt="Ko-fi" />
