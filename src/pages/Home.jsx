@@ -36,7 +36,7 @@ function Home() {
       <Container className="social-section">
         <div className="social-grid">
           <div className="social-item">
-            <a href="https://twitter.com/your_twitter" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/19Vodnik" target="_blank" rel="noopener noreferrer">
               <div className="social-card twitter-card">
                 <div className="social-image">
                   <Image src={import.meta.env.BASE_URL + "/Images/vodnik_logo.jpg"} alt="Twitter" />
