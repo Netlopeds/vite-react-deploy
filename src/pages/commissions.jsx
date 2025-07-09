@@ -1,5 +1,5 @@
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 
@@ -14,6 +14,25 @@ function Commissions() {
     setSelectedImage(null);
   };
 
+  // Add escape key handler
+  useEffect(() => {
+    const handleEscapeKey = (event) => {
+      if (event.key === 'Escape' && selectedImage) {
+        closeModal();
+      }
+    };
+
+    // Add event listener when modal is open
+    if (selectedImage) {
+      document.addEventListener('keydown', handleEscapeKey);
+    }
+
+    // Cleanup event listener
+    return () => {
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, [selectedImage]);
+
   return (
     <Container fluid className="p-0 commission-page">
       <div className="profile-section">
@@ -27,7 +46,7 @@ function Commissions() {
               rel="noopener noreferrer"
               className="commission-link"
             >
-              twitter
+              Twitter
             </a>{' '}
             if comms are open!
           </span>
@@ -51,7 +70,7 @@ function Commissions() {
         </div>
 
         <div className="commission-item">
-          <Row className="align-items-end gy-3">
+          <Row className="align-items-center gy-3">
             <Col md={5}>
               <div className="commission-image-container">
                 <Image
@@ -68,18 +87,21 @@ function Commissions() {
                 />
               </div>
             </Col>
-            <Col md={7}>
-              <p className="commission-details">
-                <span className="commission-price">50$</span> - SKETCH/LINEART ONLY
-              </p>
-              <p className="commission-details-3">
-                <span className="commission-price">75$</span> - LINEART COLORED 
-              </p>
+            <Col md={7} className="d-flex align-items-center justify-content-center">
+              <div className="text-center text-md-start">
+                <p className="commission-details">
+                  <span className="commission-price">50$</span> - SKETCH/LINEART ONLY
+                </p>
+                <p className="commission-details-3">
+                  <span className="commission-price">75$</span> - LINEART COLORED 
+                </p>
+              </div>
             </Col>
           </Row>
         </div>
+        
         <div className="commission-item">
-          <Row className="align-items-end gy-3">
+          <Row className="align-items-center gy-3">
             <Col md={5}>
               <div className="commission-image-container">
                 <Image
@@ -96,15 +118,18 @@ function Commissions() {
                 />
               </div>
             </Col>
-            <Col md={7}>
-              <p className="commission-details-4">
-                <span className="commission-price">200$</span> - PAINTED RENDER WITH BG (FULL ILLUSTRATION)
-              </p>
+            <Col md={7} className="d-flex align-items-center justify-content-center">
+              <div className="text-center text-md-start">
+                <p className="commission-details-4">
+                  <span className="commission-price">200$</span> - PAINTED RENDER WITH BG (FULL ILLUSTRATION)
+                </p>
+              </div>
             </Col>
           </Row>
         </div>
+        
         <div className="commission-item">
-          <Row className="align-items-end gy-3">
+          <Row className="align-items-center gy-3">
             <Col md={5}>
               <div className="commission-image-container">
                 <Image
@@ -121,10 +146,12 @@ function Commissions() {
                 />
               </div>
             </Col>
-            <Col md={7}>
-              <p className="commission-details-2">
-                <span className="commission-price">200$</span> - CHARACTER SHEET
-              </p>
+            <Col md={7} className="d-flex align-items-center justify-content-center">
+              <div className="text-center text-md-start">
+                <p className="commission-details-2">
+                  <span className="commission-price">200$</span> - CHARACTER SHEET
+                </p>
+              </div>
             </Col>
           </Row>
         </div>
