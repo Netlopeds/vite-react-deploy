@@ -534,3 +534,49 @@ body {
     width: 100%;
   }
 }
+
+/* Commission Image Styles */
+.commission-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.commission-image-container:hover {
+  transform: translateY(-5px);
+}
+
+.commission-image-container .img-fluid {
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.commission-image-container:hover .img-fluid {
+  transform: scale(1.05);
+}
+
+.commission-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.commission-image-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}

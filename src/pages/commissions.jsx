@@ -1,8 +1,19 @@
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 
 function Commissions() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <Container fluid className="p-0 commission-page">
       <div className="profile-section">
@@ -42,14 +53,20 @@ function Commissions() {
         <div className="commission-item">
           <Row className="align-items-end gy-3">
             <Col md={5}>
-              <Image
-                src={import.meta.env.BASE_URL + '/Images/commission_example_lineart.jpg'}
-                fluid
-              />
-              <Image
-                src={import.meta.env.BASE_URL + '/Images/commission_example_lineart_painted.jpg'}
-                fluid
-              />
+              <div className="commission-image-container">
+                <Image
+                  src={import.meta.env.BASE_URL + '/Images/commission_example_lineart.jpg'}
+                  fluid
+                  onClick={() => handleImageClick(import.meta.env.BASE_URL + '/Images/commission_example_lineart.jpg')}
+                />
+              </div>
+              <div className="commission-image-container">
+                <Image
+                  src={import.meta.env.BASE_URL + '/Images/commission_example_lineart_painted.jpg'}
+                  fluid
+                  onClick={() => handleImageClick(import.meta.env.BASE_URL + '/Images/commission_example_lineart_painted.jpg')}
+                />
+              </div>
             </Col>
             <Col md={7}>
               <p className="commission-details">
@@ -64,14 +81,20 @@ function Commissions() {
         <div className="commission-item">
           <Row className="align-items-end gy-3">
             <Col md={5}>
-              <Image
-                src={import.meta.env.BASE_URL + '/Images/commission_example_painted_render.jpg'}
-                fluid
-              />
-              <Image
-                src={import.meta.env.BASE_URL + '/Images/commission_example_painted_render_2.jpg'}
-                fluid
-              />
+              <div className="commission-image-container">
+                <Image
+                  src={import.meta.env.BASE_URL + '/Images/commission_example_painted_render.jpg'}
+                  fluid
+                  onClick={() => handleImageClick(import.meta.env.BASE_URL + '/Images/commission_example_painted_render.jpg')}
+                />
+              </div>
+              <div className="commission-image-container">
+                <Image
+                  src={import.meta.env.BASE_URL + '/Images/commission_example_painted_render_2.jpg'}
+                  fluid
+                  onClick={() => handleImageClick(import.meta.env.BASE_URL + '/Images/commission_example_painted_render_2.jpg')}
+                />
+              </div>
             </Col>
             <Col md={7}>
               <p className="commission-details-4">
@@ -83,14 +106,20 @@ function Commissions() {
         <div className="commission-item">
           <Row className="align-items-end gy-3">
             <Col md={5}>
-              <Image
-                src={import.meta.env.BASE_URL + '/Images/commission_example_charactersheet.jpg'}
-                fluid
-              />
-              <Image
-                src={import.meta.env.BASE_URL + '/Images/commission_example_charactersheet2.jpg'}
-                fluid
-              />
+              <div className="commission-image-container">
+                <Image
+                  src={import.meta.env.BASE_URL + '/Images/commission_example_charactersheet.jpg'}
+                  fluid
+                  onClick={() => handleImageClick(import.meta.env.BASE_URL + '/Images/commission_example_charactersheet.jpg')}
+                />
+              </div>
+              <div className="commission-image-container">
+                <Image
+                  src={import.meta.env.BASE_URL + '/Images/commission_example_charactersheet2.jpg'}
+                  fluid
+                  onClick={() => handleImageClick(import.meta.env.BASE_URL + '/Images/commission_example_charactersheet2.jpg')}
+                />
+              </div>
             </Col>
             <Col md={7}>
               <p className="commission-details-2">
@@ -100,6 +129,13 @@ function Commissions() {
           </Row>
         </div>
       </div>
+
+      {/* Image Modal Overlay */}
+      {selectedImage && (
+        <div className="commission-image-overlay" onClick={closeModal}>
+          <img src={selectedImage} alt="Commission example" />
+        </div>
+      )}
     </Container>
   );
 }
