@@ -1,12 +1,13 @@
 @font-face {
   font-family: 'Agrandir-Regular';
-  src: url('./Fonts/Agrandir-Regular.otf') format('opentype');
+  src: url('./Fonts/Agrandir-Regular.otf') format('opentype'),
+       url('/vodnik-deploy/Fonts/Agrandir-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'Agrandir-Regular', sans-serif;
+  font-family: 'Agrandir-Regular', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #fff;
