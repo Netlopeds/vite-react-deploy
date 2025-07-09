@@ -22,9 +22,9 @@ function CustomNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto nav-links">
             <Nav.Link as={Link} to="/" className={`nav-item-link ${location.pathname === '/' ? 'active' : ''}`}>HOME</Nav.Link>
-            <Nav.Link href="#commissions" className="nav-item-link">COMMISSIONS</Nav.Link>
+            <Nav.Link as={Link} to="/commissions" className={`nav-item-link ${location.pathname === '/commissions' ? 'active' : ''}`}>COMMISSIONS</Nav.Link>
             <Nav.Link as={Link} to="/contact" className={`nav-item-link ${location.pathname === '/contact' ? 'active' : ''}`}>CONTACT</Nav.Link>
-            <Nav.Link href="#about" className="nav-item-link">ABOUT</Nav.Link>
+            <Nav.Link as={Link} to="/about" className={`nav-item-link ${location.pathname === '/about' ? 'active' : ''}`}>ABOUT</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
